@@ -1,0 +1,23 @@
+server:
+  #指定项目的访问路径
+  servlet:
+    context-path: /
+    #jsp页面热部署
+    jsp:
+      init-parameters:
+        development: true
+  port: 8080
+#视图解析器
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+#post请求乱码
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+#指定activemq与SpringBoot集成
+  activemq:
+    broker-url: tcp://192.168.74.151:61616
